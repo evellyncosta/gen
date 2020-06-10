@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	template="WEB-INF/template/Layout.xhtml">
+
+
+
+	<ui:define name="titulo">
+		 <h3 >Home</h3>
+
+	</ui:define>
+	<ui:define name="conteudo">
+
+		<style type="text/css">
+.ui-panel, div.ui-state-hover {
+	margin: 10px;
+	width: 200px;
+	text-align: center;
+}
+
+.ui-dashboard-column {
+	width: 220px;
+	padding-bottom: 0px;
+}
+</style>
+
+
+		<div class="p-grid">
+			<div class="p-col-12">
+				<div class="p-grid p-justify-center">
+					<h:form>
+						<p:growl id="msgs" showDetail="true"
+							skipDetailIfEqualsSummary="true" />
+
+						<h:form>
+							<p:growl id="msgs" showDetail="true"
+								skipDetailIfEqualsSummary="true" />
+
+							<p:dashboard id="board" model="#{dashboardManagedBean.model}">
+								<p:panel id="alunosMatriculados" header="Alunos Matriculados"
+									closable="false" toggleable="false">
+									<h2>50</h2>
+								</p:panel>
+								<p:panel id="alunosInadimplentes" header="Alunos Inadimplentes"
+									closable="false" toggleable="false">
+									<h2>10</h2>
+								</p:panel>
+								<p:panel id="alunosFaltosos" header="Alunos Faltosos"
+									closable="false" toggleable="false">
+									<h2>18</h2>
+								</p:panel>
+							</p:dashboard>
+						</h:form>
+					</h:form>
+
+				</div>
+			</div>
+			<div class="p-col-6">
+				<h:form>
+					<p:growl id="msgs" showDetail="true"
+						skipDetailIfEqualsSummary="true" />
+
+					<p:fieldset legend="Agendamentos" style="margin-bottom:20px; height:200px;">
+						<h:panelGrid columns="1" cellpadding="10">
+							<p:dataTable var="car" value="#{dtBasicView.cars}">
+
+								<p:column headerText="Nome">
+									<h:outputText value="#{car.id}" />
+								</p:column>
+
+								<p:column headerText="Responsável">
+									<h:outputText value="#{car.year}" />
+								</p:column>
+
+								<p:column headerText="Telefone">
+									<h:outputText value="#{car.brand}" />
+								</p:column>
+
+							</p:dataTable>
+						</h:panelGrid>
+					</p:fieldset>
+				</h:form>
+			</div>
+			
+			<div class="p-col-6">
+				<h:form>
+					<p:growl id="msgs" showDetail="true"
+						skipDetailIfEqualsSummary="true" />
+
+					<p:fieldset legend="Faturamento" style="margin-bottom:20px;margin-right:45px;">
+						<h:panelGrid columns="1" >
+						<p:chart type="line" model="#{chartManagedBean.model}" />
+						</h:panelGrid>
+					</p:fieldset>
+				</h:form>
+				
+			</div>
+		</div> -
+	</ui:define>
+</ui:composition>

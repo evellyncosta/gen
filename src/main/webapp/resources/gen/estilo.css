@@ -1,0 +1,69 @@
+@charset "utf-8";
+
+@import
+	url('https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap')
+	;
+
+/*
+body .ui-menu .ui-menu-list .ui-widget-header {   
+
+    background-color: #007AD9 !important;
+   
+}*/
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	font-family: 'Josefin Sans', sans-serif;
+}
+
+.box, .sample-layout>div {
+	
+	border-radius: 4px;
+}
+
+/*.box-stretched {
+	height: 100%;
+}*/
+
+.sample-layout {
+	margin: 0;
+}
+
+.sample-layout>div {
+	border: 1px solid #ffffff;
+}
+
+.vertical-container {
+	margin: 0;
+	height: 200px;
+	background: #efefef;
+	border-radius: 4px;
+}
+
+.nested-grid .p-col-4 {
+	padding-bottom: 1em;
+}
+
+.ui-menu {
+	font-size: 16pt !important;
+	background-color: #2093ea !important;
+}
+
+.ui-menu .ui-menuitem {
+	padding: 5px !important;
+}
+
+.ui-menu .ui-menuitem-link:hover {
+	background-color: #71899b !important;
+}
+
+.ui-menu .ui-menuitem-text {
+	color: white !important;
+}
+
+.ui-icon {
+	color: white !important;
+}
+
+

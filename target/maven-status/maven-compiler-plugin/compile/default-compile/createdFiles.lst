@@ -1,0 +1,5 @@
+com/gen/util/Transacional.class
+com/gen/model/Curso.class
+com/gen/util/TransationalInterceptor.class
+com/gen/controller/CadastroCursosBean.class
+com/gen/util/EntityManagerProducer.class
