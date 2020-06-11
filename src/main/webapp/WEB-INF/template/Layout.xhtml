@@ -19,57 +19,62 @@
 </h:head>
 
 <h:body>
+	<div class="p-grid">
 
-	<div class="p-grid sample-layout">
-		<div>
-			<h:form>
-				<p:menu>
-					<p:menuitem value="Home" icon="pi pi-home" action="Home">
-					</p:menuitem>
-					<p:submenu label="Alunos">
-						<p:menuitem value="Gerenciar" action="Alunos" icon="pi pi-users" />
-						<p:menuitem value="Agendar" action="Agendar" icon="pi pi-tag" />
-						<p:menuitem value="Financeiro" action="Financeiro"
-							icon="pi pi-dollar" />
-						<p:menuitem value="Reponsáveis" action="Responsaveis"
-							icon="pi pi-chevron-circle-right" />
-					</p:submenu>
-					<p:submenu label="Professores">
-						<p:menuitem value="Geranciar" action="Professores"
-							icon="pi pi-briefcase" />
-					</p:submenu>
+		<div class="p-col-2">
+			<div class="box">
+				<h:form>
+					<p:menu>
+						<p:menuitem value="Home" icon="pi pi-home" action="Home">
+						</p:menuitem>
+						<p:submenu label="Alunos">
+							<p:menuitem value="Gerenciar" action="Alunos" icon="pi pi-users" />
+							<p:menuitem value="Agendar" action="Agendar" icon="pi pi-tag" />
+							<p:menuitem value="Financeiro" action="Financeiro"
+								icon="pi pi-dollar" />
+							<p:menuitem value="Reponsáveis" action="Responsaveis"
+								icon="pi pi-chevron-circle-right" />
+						</p:submenu>
+						<p:submenu label="Professores">
+							<p:menuitem value="Geranciar" action="Professores"
+								icon="pi pi-briefcase" />
+						</p:submenu>
 
-					<p:submenu label="Cursos">
-						<p:menuitem value="Gerenciar" action="Cursos"
-							icon="pi pi pi-th-large" />
-						<p:menuitem value="Turmas" action="Turmas" icon="pi pi-sitemap" />
-						<p:menuitem value="Planos de Aula" action="Planos"
-							icon="pi pi-file" />
-					</p:submenu>
-					<p:submenu label="Usuários">
-						<p:menuitem value="Gerenciar" action="Usuarios" icon="pi pi-user" />
-					</p:submenu>
-				</p:menu>
-			</h:form>
-		</div>
-		<div class="p-col">
-			<div class="p-grid">
-				<div class="p-col">				
-					<div class="p-grid p-justify-start" style="margin-top: 1em;">
-						<ui:insert name="titulo" />
-					</div> 
-				</div>
-				<div style="margin-left: 1em;margin-right: 1em;">
-					<ui:insert name="conteudo" />
-				</div>
+						<p:submenu label="Cursos">
+							<p:menuitem value="Gerenciar" action="Cursos"
+								icon="pi pi pi-th-large" />
+							<p:menuitem value="Turmas" action="Turmas" icon="pi pi-sitemap" />
+							<p:menuitem value="Planos de Aula" action="Planos"
+								icon="pi pi-file" />
+						</p:submenu>
+						<p:submenu label="Usuários">
+							<p:menuitem value="Gerenciar" action="Usuarios" icon="pi pi-user" />
+						</p:submenu>
+					</p:menu>
+				</h:form>
 			</div>
 		</div>
 
+
+
+		<div class="p-col">
+			<div class="box">
+				<div class="p-col">
+				<ui:insert name="titulo" />
+					<!-- <div  style="margin-top: 1em;">
+						
+					</div> -->
+				</div>
+				<div class="p-col">
+				<ui:insert name="conteudo" />
+					<!-- <div style="margin-left: 1em; margin-right: 1em;">
+						
+					</div> -->
+				</div>
+
+			</div>
+		</div>
 	</div>
-
-
-
-
 
 
 

@@ -66,4 +66,9 @@ body .ui-menu .ui-menu-list .ui-widget-header {
 	color: white !important;
 }
 
+.ui-menu {
+    width: 100% !important;
+    
+}
+
 

@@ -1,5 +1,6 @@
 package com.gen.model;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import javax.persistence.Column;
@@ -17,7 +18,7 @@ import com.gen.enums.Sexo;
 
 @Entity
 @Table(name = "professor", schema = "saturno")
-public class Professor {
+public class Professor implements Serializable{
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -31,6 +32,8 @@ public class Professor {
 	
 	private String rg;
 	
+	private String cpf;
+	
 	private String telefone;
 	
 	@Embedded
@@ -41,6 +44,7 @@ public class Professor {
 	
 	@Enumerated(EnumType.STRING)
 	private Sexo sexo;
+	
 
 	public Long getId() {
 		return id;

@@ -7,15 +7,15 @@
 	template="WEB-INF/template/Layout.xhtml">
 
 	<ui:define name="titulo">
-	Alunos 
-</ui:define>
+	Agendar 
+	</ui:define>
 	<ui:define name="conteudo">
 		<h:form>
 			<p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
 
 			<div class="ui-g">
 				<p:panel id="horizontal" header="Alunos já matriculados"
-					toggleable="true" toggleOrientation="vertical">
+					toggleable="false" >
 
 					<h:panelGrid columns="2" cellpadding="10">
 
@@ -37,23 +37,22 @@
 							</p:column>
 
 						</p:dataTable>
-
 					</h:panelGrid>
-
-
-
-
 				</p:panel>
-
-
 			</div>
+			
+			<div class="ui-g-12" style="margin-top:2%;">
+				<div class="p-grid p-justify-end">
 
-
-
-
-
-
-
+					<div class="p-col-2">
+						<div class="box">
+							<p:commandButton value="Cadastrar" id="ajax"
+								action="#{buttonView.buttonAction}"
+								styleClass="ui-priority-primary" />
+						</div>
+					</div>
+				</div>
+			</div>
 		</h:form>
 	</ui:define>
 

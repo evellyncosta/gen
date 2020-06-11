@@ -5,12 +5,62 @@
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	template="WEB-INF/template/Layout.xhtml">
-	
-<ui:define name="titulo">
+
+	<ui:define name="titulo">
 	Professores
-</ui:define>
-<ui:define name="conteudo">
-	<h1>Ola mundo em professores</h1>
-</ui:define>
+	</ui:define>
+	<ui:define name="conteudo">
+	<f:metadata>
+		<f:viewAction action="#{professoresBean}" />
+	</f:metadata>
+
+
+<style type="text/css">
+.value {
+	font-weight: bold;
+}
+
+.ui-carousel {
+	
+}
+
+.ui-carousel .ui-carousel-viewport .ui-carousel-items {
+    
+    width: 100%;
+    
+}
+</style>
+
+		<div class="p-col">
+			<h:form id="form">
+				<p:carousel value="#{professoresBean.professores}"
+					headerText="Professores" var="professor"
+					itemStyle="text-align:center" responsive="true">
+					<p:panelGrid columns="2"  style="width:100%;" 
+						columnClasses="label,value" layout="grid"
+						styleClass="ui-panelgrid-blank">
+						<f:facet name="header">
+							<h2>Foto Professor</h2>
+						</f:facet>
+
+						<h:outputText value="Id:" />
+						<h:outputText value="#{professor.id}" />
+
+						<h:outputText value="Nome" />
+						<h:outputText value="#{professor.nome}" />
+
+						<h:outputText value="Data de Nascimento" />
+						<h:outputText value="#{professor.dataNascimento}" />
+
+
+					</p:panelGrid>
+
+
+				</p:carousel>
+			</h:form>
+	
+	
+		</div>
+	</ui:define>
 
 </ui:composition>

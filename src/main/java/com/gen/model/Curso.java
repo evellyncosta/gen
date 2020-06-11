@@ -17,5 +17,7 @@ public class Curso {
 	
 	@Column
 	private String nome;
+	
+	private String log;
 
 }
