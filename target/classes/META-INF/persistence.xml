@@ -6,7 +6,7 @@
 >
 	<persistence-unit name="GenPU" transaction-type="RESOURCE_LOCAL">
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:13306/gen" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:13306/escolar" />
 			<property name="javax.persistence.jdbc.user" value="admin" />
 			<property name="javax.persistence.jdbc.password" value="123456" />
 					<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
@@ -15,7 +15,6 @@
       		
 			<property name="hibernate.show_sql" value="true" />
 			<property name="hibernate.format_sql" value="true" />
-			<property name="hibernate.hbm2ddl.auto" value="create"/> 
 		</properties>
 	</persistence-unit>
 </persistence>
