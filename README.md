@@ -10,6 +10,6 @@
 <h3 align="center"> Construção(Build) </h3>
 
 <p align="justify">Para construir o projeto com o Maven rodar o comando abaixo: </p>
-<h6 align="center">mvn clean install</h6>
+<h6 align="center"><b>mvn clean install</b></h6>
 
 <p align="justify">Ao rodar o comando, um arquivo WAR será gerado. Este arquivo deverá ser copiado e colado dentro do container ou servidor para deploy. </p>
