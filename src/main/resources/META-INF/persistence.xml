@@ -6,8 +6,8 @@
 >
 	<persistence-unit name="GenPU" transaction-type="RESOURCE_LOCAL">
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:13306/escolar" />
-			<property name="javax.persistence.jdbc.user" value="admin" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/agendamentobd" />
+			<property name="javax.persistence.jdbc.user" value="agendamento" />
 			<property name="javax.persistence.jdbc.password" value="123456" />
 					<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
 	

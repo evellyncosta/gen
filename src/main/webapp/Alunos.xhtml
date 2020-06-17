@@ -1,58 +1,82 @@
 <!DOCTYPE html>
 <ui:composition xmlns="http://www.w3.org/1999/xhtml"
-	xmlns:h="http://xmlns.jcp.org/jsf/html"
-	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
 	template="WEB-INF/template/Layout.xhtml">
 
 	<ui:define name="titulo">
-	Agendar 
+	Alunos 
 	</ui:define>
 	<ui:define name="conteudo">
+	<f:metadata>
+			<f:viewAction action="#{alunosBean.todosAlunos()}" />
+		</f:metadata>
+		
+		
 		<h:form>
-			<p:growl id="msgs" showDetail="true" skipDetailIfEqualsSummary="true" />
+			<p:messages autoUpdate="true" />
 
 			<div class="ui-g">
-				<p:panel id="horizontal" header="Alunos já matriculados"
-					toggleable="false" >
+			<p:toolbar style="width:100%;">
+				<f:facet name="left">
+					<p:inputText placeholder="Digite o nome do aluno..."
+						size="30" value="#{alunosBean.termoPesquisa}" />
 
-					<h:panelGrid columns="2" cellpadding="10">
+					<p:commandButton value="Pesquisar" icon="fa fa-search"
+						actionListener="#{alunosBean.pesquisar}"
+						update="alunosDataTable" />
 
-						<p:dataTable var="car" value="#{dtBasicView.cars}">
-							<p:column headerText="Nome">
-								<h:outputText value="teste" />
-							</p:column>
+					<span class="ui-separator"> <span
+						class="ui-icon ui-icon-grip-dotted-vertical" />
+					</span>
 
-							<p:column headerText="Telefone">
-								<h:outputText value="teste" />
-							</p:column>
+					<p:commandButton value="Novo" icon="fa fa-plus"
+						onclick="PF('alunoDialogWidgetVar').show()" />
 
-							<p:column headerText="Curso">
-								<h:outputText value="teste" />
-							</p:column>
+					<span class="ui-separator"> <span
+						class="ui-icon ui-icon-grip-dotted-vertical" />
+					</span>
 
-							<p:column headerText="Status">
-								<h:outputText value="teste" />
-							</p:column>
+					<p:commandButton title="Editar" icon="fa fa-edit" />
 
-						</p:dataTable>
-					</h:panelGrid>
-				</p:panel>
-			</div>
+					<p:commandButton title="Excluir" icon="fa fa-trash" />
+
+					<span class="ui-separator"> <span
+						class="ui-icon ui-icon-grip-dotted-vertical" />
+					</span>
+
+					<p:commandButton title="Exportar para o Excel"
+						icon="fa fa-file-excel-o" />
+				</f:facet>
+			</p:toolbar>
+
+			<p:spacer height="20px" />
 			
-			<div class="ui-g-12" style="margin-top:2%;">
-				<div class="p-grid p-justify-end">
+			<p:dataTable id="alunosDataTable"
+				value="#{alunosBean.listaAluno}" var="aluno"
+				emptyMessage="Nenhuma informação a ser exibida" paginator="true"
+				rows="10" paginatorPosition="bottom">
+				<p:column headerText="Nome" sortBy="#{aluno.nome}">
+					<h:outputText value="#{aluno.nome}" />
+				</p:column>
 
-					<div class="p-col-2">
-						<div class="box">
-							<p:commandButton value="Cadastrar" id="ajax"
-								action="#{buttonView.buttonAction}"
-								styleClass="ui-priority-primary" />
-						</div>
-					</div>
-				</div>
-			</div>
+				<p:column headerText="Telefone">
+					<h:outputText value="#{aluno.telefone}" />
+				</p:column>
+
+				<p:column headerText="Matrícula">
+					<h:outputText value="#{aluno.matricula}" />
+				</p:column>
+			</p:dataTable>
+			
+			<p:dialog header="Novo aluno" widgetVar="alunoDialogWidgetVar"
+				modal="true" resizable="false" closeOnEscape="true">
+				<p:commandButton value="Teste!" />
+			</p:dialog>
+				
+			</div>		
 		</h:form>
 	</ui:define>
 
