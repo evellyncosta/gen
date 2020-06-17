@@ -31,7 +31,7 @@ private static final long serialVersionUID = 1L;
 	@Column(name = "dt_cadastro")
 	private LocalDate dataCadastro;
 	
-	@Column(name = "dt_cadastro")
+	@Column(name = "is_ativo")
 	private Boolean isAtivo;
 
 	public Long getId() {
