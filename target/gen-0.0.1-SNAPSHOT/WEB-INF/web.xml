@@ -7,18 +7,28 @@
 	<display-name>gen</display-name>
 	
 	<welcome-file-list>
-		<welcome-file>CadastroCurso.xhtml</welcome-file>
+		<welcome-file>Home.xhtml</welcome-file>
 	</welcome-file-list>
 	
 	<context-param>
 		<param-name>javax.faces.PROJECT_STAGE</param-name>
 		<param-value>Development</param-value>
 	</context-param>
+	
+	<context-param>
+		<param-name>primefaces.FONT_AWESOME</param-name>
+		<param-value>true</param-value>
+	</context-param>
 
 	<context-param>
 		<param-name>javax.faces.FACELETS_REFRESH_PERIOD</param-name>
 		<param-value>0</param-value>
 	</context-param>
+	
+	<context-param>
+    <param-name>primefaces.THEME</param-name>
+    <param-value>nova-colored</param-value>
+</context-param>
 
 	<resource-env-ref>
 		<resource-env-ref-name>BeanManager</resource-env-ref-name>
