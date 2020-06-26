@@ -1,7 +1,7 @@
 
 <h1 align="center"> Gen </h1>
 
-<p align="justify"> Este projeto tem como objetivo ajudar pequenas escolas coordernar seu time de professores, aulas e alunos. Está sendo construído com JSF, Java 11 e MySQL como banco de dados.  </p>
+<p align="justify"> Este projeto tem como objetivo ajudar pequenas escolas a coordernar seu time de professores, aulas e alunos. Está sendo construído com JSF, Java 11 e MySQL como banco de dados.  </p>
 
 <h3 align="center"> Começando </h3>
 
@@ -13,3 +13,5 @@
 <h6 align="center"><b>mvn clean install</b></h6>
 
 <p align="justify">Ao rodar o comando, um arquivo WAR será gerado. Este arquivo deverá ser copiado e colado dentro do container ou servidor para deploy. </p>
+
+<h4>Em caso de dúvidas, poderá enviar um e-mail para ecosta.inf@gmail.com.</h4>
