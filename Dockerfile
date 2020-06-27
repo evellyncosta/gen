@@ -12,7 +12,7 @@ USER root
 WORKDIR /usr/local/tomcat
 
 
-COPY --from=dependant /app/target/gen-0.0.1-SNAPSHOT.war /webapps/gen.war
+COPY --from=dependant /app/target/gen-0.0.1-SNAPSHOT.war /usr/local/tomcat/webapps/gen.war
 
 
 EXPOSE 8080

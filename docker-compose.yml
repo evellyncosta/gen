@@ -22,8 +22,6 @@ services:
     container_name: gen
     ports:
       - "8080:8080"
-    volumes:
-      - './target:/usr/local/tomcat/webapps'
     networks:
       - dev-network
 networks:
