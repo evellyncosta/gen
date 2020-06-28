@@ -2,7 +2,7 @@
 Este projeto tem como objetivo ajudar pequenas escolas a coordernar seu time de professores, aulas e alunos. Está sendo construído com JSF, Java 11 e MySQL como banco de dados.
 
 <h2>Começando</h2>
-<p>Para rodar o projeto você deve ter o docker e o docker-compose instalado. Para rodar o projeto, basta entrar na raiz do projeto e executar os seguintes comandos:<p>
+<p>Para rodar o projeto você deve ter o docker e o docker-compose instalado.Basta entrar na raiz do projeto e executar os seguintes comandos:<p>
 
 <h5>docker-compose build</h5>
 <h5>docker-compose up</h5>
