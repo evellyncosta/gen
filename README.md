@@ -9,6 +9,6 @@ Este projeto tem como objetivo ajudar pequenas escolas a coordernar seu time de 
 
 <p>Para acessar o projeto, basta inserir http://localhost:8080/gen/ no navegador padrão.</p>
 
-<p><i>É projeto roda no Tomcat, então, lembre-se de não estar com a porta 8080 ocupada</i></p>
+<p><i>O projeto roda no Tomcat, então, lembre-se de não estar com a porta 8080 ocupada</i></p>
 
 Em caso de dúvidas, poderá enviar um e-mail para ecosta.inf@gmail.com.
