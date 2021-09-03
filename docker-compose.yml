@@ -21,7 +21,6 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=123456
       - MYSQL_DATABASE=development
-      - MYSQL_USER=root
   java:
     build: 
       context: .
